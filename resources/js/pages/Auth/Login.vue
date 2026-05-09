@@ -32,8 +32,8 @@
           <p class="text-gray-500">Ingresa tus credenciales para continuar</p>
         </div>
 
-        <div class="space-y-6">
-          <form @submit.prevent="submit">
+        <form @submit.prevent="submit">
+          <div class="space-y-6">
             <div>
               <label class="block text-sm font-semibold text-gray-700 mb-2">
                 Correo electrónico
@@ -75,34 +75,34 @@
                 />
               </div>
             </div>
-          </form>
 
-          <div class="flex items-center justify-between text-sm">
-            <label class="flex items-center gap-2 text-gray-600">
-              <input
-                type="checkbox"
-                class="rounded border-yellow-300 text-yellow-500 focus:ring-yellow-400"
-              />
-              Recordarme
-            </label>
+            <div class="flex items-center justify-between text-sm">
+              <label class="flex items-center gap-2 text-gray-600">
+                <input
+                  type="checkbox"
+                  class="rounded border-yellow-300 text-yellow-500 focus:ring-yellow-400"
+                />
+                Recordarme
+              </label>
 
-            <a
-              href="#"
-              class="text-yellow-600 hover:text-yellow-700 font-medium transition"
+              <a
+                href="#"
+                class="text-yellow-600 hover:text-yellow-700 font-medium transition"
+              >
+                ¿Olvidaste tu contraseña?
+              </a>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-white font-semibold shadow-lg shadow-yellow-300/40 transition-all duration-300 hover:scale-[1.01]"
+              :disabled="form.processing"
             >
-              ¿Olvidaste tu contraseña?
-            </a>
+              <span v-if="form.processing"> Entrando... </span>
+              <span v-else> Entrar </span>
+            </button>
           </div>
-
-          <button
-            type="submit"
-            class="w-full py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-white font-semibold shadow-lg shadow-yellow-300/40 transition-all duration-300 hover:scale-[1.01]"
-            :disabled="form.processing"
-          >
-            <span v-if="form.processing"> Entrando... </span>
-            <span v-else> Entrar </span>
-          </button>
-        </div>
+        </form>
 
         <div class="my-8 flex items-center">
           <div class="flex-1 border-t border-yellow-100"></div>
