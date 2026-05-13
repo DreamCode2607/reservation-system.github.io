@@ -11,4 +11,9 @@ class UserController extends Controller
     {
         return Inertia::render('Users/Users');
     }
+
+    public function addUser(Request $request)
+    {
+        return Inertia::render('Users/Users');
+    }
 }

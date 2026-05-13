@@ -10,11 +10,12 @@
           </p>
         </div>
 
-        <button
+        <Link
+          :href="route('addUser')"
           class="px-6 py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-amber-500 text-white font-semibold shadow-lg shadow-yellow-300/40 hover:scale-[1.02] transition"
         >
-          + Nuevo Usuario
-        </button>
+          <span class="font-semibold"> + Nuevo Usuario </span>
+        </Link>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -350,4 +351,5 @@
 
 <script setup>
 import MenuTemplade from "@/components/MenuTemplade.vue";
+import { Link } from "@inertiajs/vue3";
 </script>
