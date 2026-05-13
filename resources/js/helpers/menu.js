@@ -1,0 +1,22 @@
+export const menu = [
+    {
+        title:"Dashboard",
+        route:"dashboard",
+        icon:"🏠",
+    },
+    {
+        title:"Usuarios",
+        route:"users",
+        icon:"👥",
+    },
+    {
+        title:"Estadísticas",
+        route:"dashboard",
+        icon:"📊",
+    },
+    {
+        title:"Configuración",
+        route:"dashboard",
+        icon:"⚙️",
+    },
+];
