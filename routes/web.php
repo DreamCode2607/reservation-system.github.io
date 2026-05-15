@@ -23,6 +23,7 @@ Route::post('/logout', [AuthController::class, 'destroy'])
 
 Route::group(['prefix' => 'users'], function () {
     Route::get('/users', [UserController::class, 'users'])->name('users');
+    Route::get('/add-user', [AuthController::class, 'addUser'])->name('addUser');
 });
 
 require __DIR__ . '/auth.php';

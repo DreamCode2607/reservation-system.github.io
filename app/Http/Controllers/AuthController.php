@@ -60,4 +60,9 @@ class AuthController extends Controller
         $user->save();
         return Inertia::render('Auth/Login');
     }
+
+    public function addUser()
+    {
+        return Inertia::render('User/AddNewUser');
+    }
 }
