@@ -15,7 +15,7 @@ class AuthController extends Controller
         return Inertia::render('Auth/Login');
     }
 
-    public function store(Request $request)
+    public function login(Request $request)
     {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
@@ -30,7 +30,7 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->route('dashboard');
+        return Inertia::render('Dashboard');
     }
 
     public function destroy(Request $request)

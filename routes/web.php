@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
     Route::get('/', [AuthController::class, 'index'])->name('index');
-    Route::post('/login', [AuthController::class, 'store'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::get('/view-create-user', [AuthController::class, 'viewCreateUser'])->name('viewCreateUser');
     Route::post('/create-user', [AuthController::class, 'createUser'])->name('createUser');
 });
